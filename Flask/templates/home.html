@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Weather pridiction</title>
+            <link rel="stylesheet" href="home.css">
+            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
+    </head>
+    <body>
+        <div class="navbar">
+            <p>Weather Prediction</p>
+          </div>
+        <div class="heading">
+            <h1>Weather Forecast using Prophet Library</h1>
+        </div>
+        <div class="para">
+            <p>Weather forecasting is the application of science and technology to predict the conditions of the 
+                atmosphere for a given time.People have attempted to predict the weather informally for millennia 
+                and formally since the 19th century.Here, we predict the accurate weather temperature in celsius
+                using prophet library.
+            </p>
+        </div>
+        <br>
+        <br>
+     
+            <form method="POST" action="{{ url_for('predict') }}" class="form" style="margin-top:30px">
+                <div class="date" style="margin-left:100px;">
+                    <h3>Select date to predict weather</h3>
+                    <input type="date" name="date" id="date" required="required">
+                </div>
+            <div class="button">
+                <button type="submit">submit</button>
+            </div>
+            </form>
+            
+            </div>
+            <h2 style="margin-left:90px">{{ output }}</h2>
+            </div>
+    <body>
+</html>
