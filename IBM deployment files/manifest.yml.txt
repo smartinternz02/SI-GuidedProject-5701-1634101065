@@ -1,0 +1,7 @@
+applications:
+
+
+ -name:Python Flask App weather
+  random-route:true
+  memory:1024M
+  disk_quota:1.5G
